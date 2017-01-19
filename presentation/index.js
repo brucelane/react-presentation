@@ -46,7 +46,8 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "#ff4081"
+  primary: "#440088",
+  secondary: "red"
 });
 
 export default class Presentation extends React.Component {
@@ -56,17 +57,14 @@ export default class Presentation extends React.Component {
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
           <Slide transition={["zoom"]} bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="black">
-              Spectacle
+              Creative Coding
             </Heading>
             <Heading size={1} fit caps>
-              A ReactJS Presentation Library
+              With the React Library
             </Heading>
             <Heading size={1} fit caps textColor="black">
-              Where You Can Write Your Decks In JSX
+              And WebGL fragment shaders
             </Heading>
-            <Link href="https://github.com/FormidableLabs/spectacle">
-              <Text bold caps textColor="tertiary">View on Github</Text>
-            </Link>
             <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
@@ -161,8 +159,12 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
           </Slide>
           <Slide transition={["spin", "slide"]} bgColor="tertiary">
             <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
+              Created by Bruce LANE with Formidable
             </Heading>
+            <Link target="_new" href="https://github.com/videodromm">
+              <Text bold caps textColor="tertiary">View on Github</Text>
+              <Image width="100%" src={images.logo}/>
+            </Link>
             <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
           </Slide>
         </Deck>
