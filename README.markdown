@@ -1,4 +1,4 @@
-# Spectacle Boilerplate
+# React presentation made with Spectacle from Formidable Labs
 
 ## Reference
 
@@ -6,13 +6,11 @@ The Spectacle core API is available at [https://github.com/FormidableLabs/specta
 
 ## Development
 
-After downloading the boilerplate, your first order of business is to open terminal and run `npm install`
+In terminal, run `npm install`
 
-Next, run `rm -R .git` to remove the existing version control.
+To start up the local server, run `npm start`
 
-Then, to start up the local server, run `npm start`
-
-Open a browser and hit [http://localhost:3000](http://localhost:3000), and we are ready to roll
+Open a browser and hit [http://localhost:3033](http://localhost:3033)
 
 ## Build & Deployment
 

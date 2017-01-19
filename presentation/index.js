@@ -46,7 +46,7 @@ preloader(images);
 
 const theme = createTheme({
   primary: "#857D41",
-  secondary: "#BA714A"
+  secondary: "#540804"
 });
 
 export default class Presentation extends React.Component {
@@ -63,47 +63,18 @@ export default class Presentation extends React.Component {
             </Heading>
             <Text textSize="1.5em" margin="20px 0px 0px" bold>By Bruce LANE</Text>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Slide transition={["slide"]} bgColor="black" notes="What is webGL?">
             <Image src={images.webgl.replace("/", "")} margin="0px auto 40px" height="293px"/>
             <Heading size={1} caps fit textColor="primary" textFont="primary">
               Shaders?
             </Heading>
           </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>C-style</li><li>uniforms</li></ul>">
             <CodePane
               lang="glsl"
               source={require("raw!../assets/example.frag")}
               margin="20px auto"
             />
-          </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
-            <Heading caps fit>Flexible Layouts</Heading>
-            <Layout>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Left
-                </Heading>
-              </Fill>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Right
-                </Heading>
-              </Fill>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
-            </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
-            </Heading>
-            <Interactive/>
           </Slide>
           <Slide transition={["spin", "slide"]} bgColor="black">
             <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
