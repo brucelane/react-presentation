@@ -1,4 +1,3 @@
-return (
 // https://www.shadertoy.com/view/4sfXRB
 void main(void)
 {
@@ -13,5 +12,4 @@ void main(void)
 
 
 	fragColor = vec4(-final*abs(sin(time)),(-final*sin(time)*2.0),(final),1.0)*1.5;
-}  
-)
+}
