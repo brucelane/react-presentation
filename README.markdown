@@ -16,4 +16,4 @@ Open a browser and hit [http://localhost:3033](http://localhost:3033)
 
 Building the dist version of the project is as easy as running `npm run build`
 
-If you want to deploy the slideshow to surge, run `npm run deploy`
+If you want to deploy the slideshow, run `npm run deploy`

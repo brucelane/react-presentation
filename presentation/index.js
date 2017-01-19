@@ -76,6 +76,21 @@ export default class Presentation extends React.Component {
               margin="20px auto"
             />
           </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <Heading caps fit>Fragment shaders</Heading>
+            <Layout>
+              <Fill>
+                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                  Runs on GPU
+                </Heading>
+              </Fill>
+              <Fill>
+                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                  C-style
+                </Heading>
+              </Fill>
+            </Layout>
+          </Slide>
           <Slide transition={["spin", "slide"]} bgColor="black">
             <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
               Videodromm open source project
