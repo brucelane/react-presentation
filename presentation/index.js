@@ -37,17 +37,16 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  webgl: require("../assets/webgl.jpg"),
+  vdlogo: require("../assets/videodromm-logo.png"),
+  formidablelogo: require("../assets/formidable-logo.svg")
 };
 
 preloader(images);
 
 const theme = createTheme({
-  primary: "#440088",
-  secondary: "red"
+  primary: "#857D41",
+  secondary: "#BA714A"
 });
 
 export default class Presentation extends React.Component {
@@ -60,42 +59,22 @@ export default class Presentation extends React.Component {
               Creative Coding
             </Heading>
             <Heading size={1} fit caps>
-              With the React Library
+              WebGL fragment shaders
             </Heading>
-            <Heading size={1} fit caps textColor="black">
-              And WebGL fragment shaders
-            </Heading>
-            <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
+            <Text textSize="1.5em" margin="20px 0px 0px" bold>By Bruce LANE</Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
-            <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Wait what?
+            <Image src={images.webgl.replace("/", "")} margin="0px auto 40px" height="293px"/>
+            <Heading size={1} caps fit textColor="primary" textFont="primary">
+              Shaders?
             </Heading>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
             <CodePane
-              lang="jsx"
-              source={require("raw!../assets/deck.example")}
+              lang="glsl"
+              source={require("raw!../assets/example.frag")}
               margin="20px auto"
             />
-          </Slide>
-          <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
-            <Appear fid="1">
-              <Heading size={1} caps fit textColor="primary">
-                Full Width
-              </Heading>
-            </Appear>
-            <Appear fid="2">
-              <Heading size={1} caps fit textColor="tertiary">
-                Adjustable Darkness
-              </Heading>
-            </Appear>
-            <Appear fid="3">
-              <Heading size={1} caps fit textColor="primary">
-                Background Imagery
-              </Heading>
-            </Appear>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading caps fit>Flexible Layouts</Heading>
@@ -112,27 +91,6 @@ export default class Presentation extends React.Component {
               </Fill>
             </Layout>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
-            </BlockQuote>
-          </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
-            </Heading>
-            <Markdown>
-              {`
-![Markdown Logo](${images.markdown.replace("/", "")})
-
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
-              `}
-            </Markdown>
-          </Slide>
           <Slide transition={["slide", "spin"]} bgColor="primary">
             <Heading caps fit size={1} textColor="tertiary">
               Smooth
@@ -141,31 +99,26 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               Combinable Transitions
             </Heading>
           </Slide>
-          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-            <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
-            </List>
-          </Slide>
           <Slide transition={["slide"]} bgColor="primary">
             <Heading size={1} caps fit textColor="tertiary">
               Your presentations are interactive
             </Heading>
             <Interactive/>
           </Slide>
-          <Slide transition={["spin", "slide"]} bgColor="tertiary">
+          <Slide transition={["spin", "slide"]} bgColor="black">
             <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Created by Bruce LANE with Formidable
+              Videodromm open source project
             </Heading>
             <Link target="_new" href="https://github.com/videodromm">
               <Text bold caps textColor="tertiary">View on Github</Text>
-              <Image width="100%" src={images.logo}/>
+              <Image width="70%" src={images.vdlogo}/>
             </Link>
-            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
+          </Slide>
+          <Slide transition={["spin", "slide"]} bgColor="tertiary">
+            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
+              Made with Spectacle from
+            </Heading>
+            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.formidablelogo}/></Link>
           </Slide>
         </Deck>
       </Spectacle>
