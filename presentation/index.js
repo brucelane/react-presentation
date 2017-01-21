@@ -38,7 +38,8 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   webgl: require("../assets/webgl.jpg"),
-  vdlogo: require("../assets/videodrommlogo.png"),
+  vdlogo: require("../assets/videodromm-logo.jpg"),
+  neo: require("../assets/neo.jpg"),
   formidablelogo: require("../assets/formidable-logo.svg")
 };
 
@@ -64,7 +65,7 @@ export default class Presentation extends React.Component {
             <Text textSize="1.5em" margin="20px 0px 0px" bold>By Bruce LANE</Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="black" notes="What is webGL?">
-            <Image src={images.webgl.replace("/", "")} margin="0px auto 40px" height="293px"/>
+            <Image src={images.neo.replace("/", "")} margin="0px auto 40px" height="400px"/>
             <Heading size={1} caps fit textColor="primary" textFont="primary">
               Shaders?
             </Heading>
