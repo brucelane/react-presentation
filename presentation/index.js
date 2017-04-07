@@ -62,10 +62,10 @@ export default class Presentation extends React.Component {
             code={require("raw!../assets/example.frag")}
             ranges={[
               { loc: [0, 1968], title: "Shader source example" },
-              { loc: [1, 2], title: "variable: resolution" },
+              { loc: [1, 2], title: "variable: iResolution" },
               { loc: [1, 2], note: "vec3(1280.0, 720.0, 0)" },
               { loc: [2, 3], title: "variable: time from start" },
-              { loc: [2, 3] },
+              { loc: [2, 3], note: "0.0 to the end of times" },
               { loc: [4, 7], image: images.webgl },
               { loc: [8, 10] }
               // ...
