@@ -65,11 +65,20 @@ export default class Presentation extends React.Component {
             </Heading>
             <Text textSize="1.5em" margin="20px 0px 0px" bold>By Bruce LANE</Text>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black" notes="What is webGL?">
-            <Image src={images.neo.replace("/", "")} margin="0px auto 40px" height="400px"/>
-            <Heading size={1} caps fit textColor="primary" textFont="primary">
-              Shaders?
-            </Heading>
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <Heading caps fit>Fragment shaders</Heading>
+            <Layout>
+              <Fill>
+                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                  Runs on GPU
+                </Heading>
+              </Fill>
+              <Fill>
+                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
+                  C-style syntax
+                </Heading>
+              </Fill>
+            </Layout>
           </Slide>
           <CodeSlide
             transition={["slide"]}
@@ -85,24 +94,12 @@ export default class Presentation extends React.Component {
               { loc: [3, 4], note: "in: coordinates, out: color" },
               { loc: [5, 6], title: "normalize the drawing area" },
               { loc: [5, 6], note: "uv.x and uv.y from 0.0 to 1.0" },
+              { loc: [7, 8], title: "color animation" },
+              { loc: [7, 8], image: images.webgl },
               { loc: [8, 10], image: images.neo }
             ]}
           />
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
-            <Heading caps fit>Fragment shaders</Heading>
-            <Layout>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Runs on GPU
-                </Heading>
-              </Fill>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  C-style
-                </Heading>
-              </Fill>
-            </Layout>
-          </Slide>
+
           <Slide transition={["spin", "slide"]} bgColor="black">
             <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
               Videodromm open source project
