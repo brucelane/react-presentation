@@ -56,22 +56,6 @@ export default class Presentation extends React.Component {
     return (
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
-          <CodeSlide
-            transition={["slide"]}
-            lang="js"
-            code={require("raw!../assets/example.frag")}
-            ranges={[
-              { loc: [0, 1968], title: "Shader source example" },
-              { loc: [1, 2], title: "variable: iResolution" },
-              { loc: [1, 2], note: "vec3(1280.0, 720.0, 0)" },
-              { loc: [2, 3], title: "variable: time from start" },
-              { loc: [2, 3], note: "0.0 to the end of times" },
-              { loc: [4, 7], image: images.webgl },
-              { loc: [8, 10] }
-              // ...
-            ]}
-          />
-
           <Slide transition={["zoom"]} bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="black">
               Creative Coding
@@ -87,13 +71,23 @@ export default class Presentation extends React.Component {
               Shaders?
             </Heading>
           </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>C-style</li><li>uniforms</li></ul>">
-            <CodePane
-              lang="glsl"
-              source={require("raw!../assets/example.frag")}
-              margin="20px auto"
-            />
-          </Slide>
+          <CodeSlide
+            transition={["slide"]}
+            lang="js"
+            code={require("raw!../assets/example.frag")}
+            ranges={[
+              { loc: [0, 1968], title: "Shader source example" },
+              { loc: [0, 1], title: "Variable: iResolution" },
+              { loc: [0, 1], note: "Viewport resolution: vec3(1280.0, 720.0, 0)" },
+              { loc: [1, 2], title: "Variable: time from start" },
+              { loc: [1, 2], note: "shader playback time (in seconds)" },
+              { loc: [3, 4], title: "main entry point" },
+              { loc: [3, 4], note: "in: coordinates, out: color" },
+              { loc: [5, 6], title: "normalize the drawing area" },
+              { loc: [5, 6], note: "uv.x and uv.y from 0.0 to 1.0" },
+              { loc: [8, 10], image: images.neo }
+            ]}
+          />
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading caps fit>Fragment shaders</Heading>
             <Layout>
