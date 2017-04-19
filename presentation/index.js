@@ -41,6 +41,7 @@ const images = {
   webgl: require("../assets/webgl.jpg"),
   vdlogo: require("../assets/videodromm-logo.jpg"),
   neo: require("../assets/neo.jpg"),
+  circle: require("../assets/circle.jpg"),
   formidablelogo: require("../assets/formidable-logo.svg")
 };
 
@@ -97,6 +98,20 @@ export default class Presentation extends React.Component {
               { loc: [7, 8], title: "color animation" },
               { loc: [7, 8], image: images.webgl },
               { loc: [8, 10], image: images.neo }
+            ]}
+          />
+          <CodeSlide
+            transition={["slide"]}
+            lang="js"
+            code={require("raw!../assets/circle.frag")}
+            ranges={[
+              { loc: [0, 1968], title: "Circle example" },
+              { loc: [4, 5], title: "center the drawing" },
+              { loc: [4, 5], note: "uv.x and uv.y now from -0.5 to 0.5" },
+              { loc: [5, 6], title: "length = distance from center" },
+              { loc: [5, 6], note: "circ = 4.0 in the center, 0.0 on the sides" },
+              { loc: [6, 7], note: "red and green computed from circ" },
+              { loc: [6, 7], image: images.circle }
             ]}
           />
 
