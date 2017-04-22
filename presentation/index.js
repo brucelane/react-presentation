@@ -97,7 +97,7 @@ export default class Presentation extends React.Component {
               { loc: [5, 6], note: "uv.x and uv.y from 0.0 to 1.0" },
               { loc: [7, 8], title: "color animation" },
               { loc: [7, 8], image: images.webgl },
-              { loc: [8, 10], image: images.neo }
+              { loc: [7, 8], image: images.neo }
             ]}
           />
           <CodeSlide
@@ -111,7 +111,8 @@ export default class Presentation extends React.Component {
               { loc: [5, 6], title: "length = distance from center" },
               { loc: [5, 6], note: "circ = 4.0 in the center, 0.0 on the sides" },
               { loc: [6, 7], note: "red and green computed from circ" },
-              { loc: [6, 7], image: images.circle }
+              { loc: [6, 7], image: images.circle },
+              { loc: [7, 8], image: images.neo }
             ]}
           />
 
